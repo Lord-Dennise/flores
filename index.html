@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Galaxia 3D de Flores Amarillas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js para la esfera y el aro 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Pantalla de carga con explosión circular inicial (15s) -->
+    <div id="intro-loader"></div>
+
+    <!-- Lienzo 3D del planeta (detrás) -->
+    <div id="canvas-container"></div>
+
+    <!-- Fondo y universo de flores y estrellas (ahora con z-index para cruzar por delante y detrás) -->
+    <div id="universe"></div>
+
+    <!-- Tarjeta de dedicatoria -->
+    <div class="card" id="love-card">
+        <p class="highlight-text">¡Feliz día de las flores amarillas! Se le quiere</p>
+        <button id="close-btn">Cerrar</button>
+    </div>
+
+    <!-- Botón de música flotante -->
+    <button id="music-btn" class="music-floating-btn">🎵 Reproducir Música</button>
+    
+    <!-- Audio con atributos autoplay y muted para saltarse restricciones de carga -->
+    <audio id="background-music" autoplay loop muted>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
